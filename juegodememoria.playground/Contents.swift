@@ -29,23 +29,16 @@ El proyecto deberá estar en la cuenta de GitHub del alumno
 
 for numero in 0...100{
     
-    // 0 no sigue ninguna regla
-    if numero > 0 {
-        // Si el número es divisible entre 5, imprime: # el número  + “Bingo!!!
-        if numero % 5 == 0{
+    switch numero {
+    case 0: continue
+    case 30...40: print("# \(numero) Viva Swift!!!") // Si el número se encuentra dentro de un rango del 30 al 40, imprime: # el número +  “Viva Swift!!!
+    default:
+        if numero % 5 == 0{ // Si el número es divisible entre 5, imprime: # el número  + “Bingo!!!
             print("# \(numero) Bingo!!!")
-        }
-        
-        // Si el número es par, imprime: # el número + “par!!!
-        if numero % 2 == 0 {
+        } else if numero % 2 == 0 { // Si el número es par, imprime: # el número + “par!!!
             print("# \(numero) par!!!")
         } else { // Si el número es impar, imprime: # el número + “impar!!!
             print("# \(numero) impar!!!")
-        }
-        
-        // Si el número se encuentra dentro de un rango del 30 al 40, imprime: # el número +  “Viva Swift!!!
-        if numero > 30 && numero < 40 {
-            print("# \(numero) Viva Swift!!!")
         }
     }
 }
